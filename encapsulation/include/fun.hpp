@@ -19,12 +19,12 @@ class LongitudinalControl
     public:
         LongitudinalControl();
         void Algorithm();
-        void SetInput(InputData input);
+        void SetInput(InputData input_);
         InputData GetInputData();
         OutputData GetOutputData();
     private:
-        InputData input;
-        OutputData output;
+        InputData input_;
+        OutputData output_;
 };
 
 #endif // TOKEN_FUN_H_
