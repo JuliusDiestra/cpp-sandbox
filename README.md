@@ -10,6 +10,8 @@ Some projects using C++ and CMake.
 * **pointers-example-one :** Example using pointers.
 * **encapsulation :** Example about encapsulation. How to access get and set data from an object.
 * **smart-pointer:** Example using smart-pointer. In this example a Vehicle Class and a Controller Class is used to create smart pointers.
+* **shared-smart-pointer:** Example using shared pointer. In this example a Vehicle Class and a Controller Class is used to create smart shared pointers.
+* **pass-by-reference:** Example passing one class to another class by reference. Vehicle Class is passed by reference to Controller Class.
 
 ## How to use ?
 
