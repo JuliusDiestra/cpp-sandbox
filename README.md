@@ -4,14 +4,14 @@ Some projects using C++ and CMake.
 
 ## List of projects
 
-* **hello :** Hello world project. Prints a nice message.
-* **hello-library :** Hello world project using a library. Prints a nice message from library.
-* **map-example :** Example using std::map
-* **pointers-example-one :** Example using pointers.
-* **encapsulation :** Example about encapsulation. How to access get and set data from an object.
-* **smart-pointer:** Example using smart-pointer. In this example a Vehicle Class and a Controller Class is used to create smart pointers.
-* **shared-smart-pointer:** Example using shared pointer. In this example a Vehicle Class and a Controller Class is used to create smart shared pointers.
-* **pass-by-reference:** Example passing one class to another class by reference. Vehicle Class is passed by reference to Controller Class.
+* **01_hello :** Hello world project. Prints a nice message.
+* **02_hello-library :** Hello world project using a library. Prints a nice message from library.
+* **03_map-example :** Example using std::map
+* **04_pointers-example :** Example using pointers.
+* **05_encapsulation :** Example about encapsulation. How to access get and set data from an object.
+* **06_smart-pointer:** Example using smart-pointer. In this example a Vehicle Class and a Controller Class is used to create smart pointers.
+* **07_shared-smart-pointer:** Example using shared pointer. In this example a Vehicle Class and a Controller Class is used to create smart shared pointers.
+* **08_pass-by-reference:** Example passing one class to another class by reference. Vehicle Class is passed by reference to Controller Class.
 
 ## How to use ?
 
