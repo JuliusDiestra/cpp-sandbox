@@ -12,6 +12,8 @@ Some projects using C++ and CMake.
 * **06_smart-pointer:** Example using smart-pointer. In this example a Vehicle Class and a Controller Class is used to create smart pointers.
 * **07_shared-smart-pointer:** Example using shared pointer. In this example a Vehicle Class and a Controller Class is used to create smart shared pointers.
 * **08_pass-by-reference:** Example passing one class to another class by reference. Vehicle Class is passed by reference to Controller Class.
+* **09_functional:** Example using standard functional library.
+* **10_template:** Example using template within a class.
 
 ## How to use ?
 
