@@ -14,6 +14,9 @@ Some projects using C++ and CMake.
 * **08_pass-by-reference:** Example passing one class to another class by reference. Vehicle Class is passed by reference to Controller Class.
 * **09_functional:** Example using standard functional library.
 * **10_template:** Example using template within a class.
+* **11_vector:** Example using std::vector.
+* **12_operator:** Example operador overloading and a proxy nested class.
+
 
 ## How to use ?
 

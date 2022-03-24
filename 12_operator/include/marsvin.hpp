@@ -13,27 +13,26 @@ class MarsvinData {
         std::size_t GetSize();
         void PrintData() const;
         // Operator: Set & Get Using a Proxy class
-        class EntryProxy {
-            public:
-                EntryProxy(MarsvinData& marsvin_data,std::size_t j): marsvin_data_(marsvin_data),j_(j) {}
-                operator T() {
-                    return marsvin_data_.GetEntry(j_);
-                }
-                void operator=(T input) {
-                    marsvin_data_.SetEntry(j_,input);
-                }
-            private:
-                MarsvinData& marsvin_data_;
-                std::size_t j_;
-        };
+        class EntryProxy;
         EntryProxy operator[](std::size_t j) {
             return EntryProxy(*this,j);
-        }
+        };
     private:
         std::vector<T> data_;
         std::size_t size_;
 };
 
+
+template<typename T>
+class MarsvinData<T>::EntryProxy {
+    public:
+        EntryProxy(MarsvinData<T>& marsvin_data,std::size_t j);
+        operator T();
+        void operator=(T input);
+    private:
+        MarsvinData<T> marsvin_data_;
+        std::size_t j_;
+};
 // Implementation
 
 // Constructor
@@ -59,5 +58,33 @@ template<typename T> void MarsvinData<T>::PrintData() const {
     }
 }
 
+// ###########################################
+
+template<typename T> typename MarsvinData<T>::EntryProxy::EntryProxy(MarsvinData<T>& marsvin_data,std::size_t j) : marsvin_data_{marsvin_data},j_{j} {}
+
+template<typename T> typename MarsvinData<T>::EntryProxy::operator T() {
+    return marsvin_data_.GetEntry(j_);
+}
+
+template<typename T> typename void MarsvinData<T>::EntryProxy::operator=(T input) {
+    marsvin_data_.SetEntry(j_,input);
+}
+
+// ###########################################
+/*
+template<typename T> typename MarsvinData<T>::EntryProxy {
+    public:
+        EntryProxy(MarsvinData& marsvin_data,std::size_t j): marsvin_data_(marsvin_data),j_(j) {};
+        operator T() {
+            return marsvin_data_.GetEntry(j_);
+        };
+        void operator=(T input) {
+            marsvin_data_.SetEntry(j_,input);
+        };
+    private:
+        MarsvinData& marsvin_data_;
+        std::size_t j_;
+}
+*/
 #endif // MARSVINDATA_H_
 
