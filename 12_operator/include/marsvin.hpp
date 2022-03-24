@@ -6,32 +6,29 @@
 
 template <typename T>
 class MarsvinData {
+    private:
+        std::vector<T> data_;
+        std::size_t size_;
+        class EntryProxy;
     public:
         MarsvinData(std::size_t n);
         T GetEntry(std::size_t j) const;
         void SetEntry(std::size_t j,T entry);
-        std::size_t GetSize();
+        std::size_t GetSize() const;
         void PrintData() const;
         // Operator: Set & Get Using a Proxy class
-        class EntryProxy {
-            public:
-                EntryProxy(MarsvinData& marsvin_data,std::size_t j): marsvin_data_(marsvin_data),j_(j) {}
-                operator T() {
-                    return marsvin_data_.GetEntry(j_);
-                }
-                void operator=(T input) {
-                    marsvin_data_.SetEntry(j_,input);
-                }
-            private:
-                MarsvinData& marsvin_data_;
-                std::size_t j_;
-        };
-        EntryProxy operator[](std::size_t j) {
-            return EntryProxy(*this,j);
-        }
+        EntryProxy operator[](std::size_t j);
+};
+
+template<typename T>
+class MarsvinData<T>::EntryProxy {
+    public:
+        EntryProxy(MarsvinData<T>& marsvin_data,std::size_t j);
+        operator T();
+        void operator=(T entry_input);
     private:
-        std::vector<T> data_;
-        std::size_t size_;
+        MarsvinData& marsvin_data_;
+        std::size_t j_;
 };
 
 // Implementation
@@ -57,6 +54,21 @@ template<typename T> void MarsvinData<T>::PrintData() const {
             std::cout << data_.at(j) << '\n';
         }
     }
+}
+
+// ###############################
+template<typename T> typename MarsvinData<T>::EntryProxy MarsvinData<T>::operator[](std::size_t j) {
+    return EntryProxy(*this,j);
+}
+
+template<typename T> MarsvinData<T>::EntryProxy::EntryProxy(MarsvinData<T>& marsvin_data,std::size_t j) : marsvin_data_{marsvin_data},j_{j}{}
+
+template<typename T> MarsvinData<T>::EntryProxy::operator T(){
+    return marsvin_data_.GetEntry(j_);
+}
+
+template<typename T> void MarsvinData<T>::EntryProxy::operator=(T entry_input){
+    marsvin_data_.SetEntry(j_,entry_input);
 }
 
 #endif // MARSVINDATA_H_
