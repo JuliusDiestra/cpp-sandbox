@@ -4,7 +4,6 @@ project(marsvin_bin LANGUAGES CXX)
 # Link source code to SOURCE variable
 set(SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
-    #    ${CMAKE_CURRENT_SOURCE_DIR}/src/marsvin.cpp
 )
 # Add source code to executable
 add_executable(${PROJECT_NAME} ${SOURCES})
