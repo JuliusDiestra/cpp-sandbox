@@ -12,6 +12,7 @@ int main() {
     dataMarsvin[1] = 100;
     dataMarsvin.PrintData();
     std::cout << "Entry : " << dataMarsvin[2] << std::endl;
+    std::cout << "Sum first and last element : " << dataMarsvin[0] + dataMarsvin[4] << std::endl;
     return 0;
 }
 
