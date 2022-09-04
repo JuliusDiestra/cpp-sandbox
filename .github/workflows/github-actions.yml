@@ -5,45 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build hello project
+      - name: Build all projects
         run: |
-          cd 01_hello
-          rm -rf build
-          bash build-code.sh
-          cd ..
-      - name: Build hello-library project
-        run: |
-          cd 02_hello-library
-          rm -rf build
-          bash build-code.sh
-      - name: Build map-example project
-        run: |
-          cd 03_map-example
-          rm -rf build
-          bash build-code.sh
-      - name: Build pointers-example project
-        run: |
-          cd 04_pointers-example
-          rm -rf build
-          bash build-code.sh
-      - name: Build encapsulation project
-        run: |
-          cd 05_encapsulation
-          rm -rf build
-          bash build-code.sh
-      - name: Build unique-smart-pointer project
-        run: |
-          cd 06_unique-smart-pointer
-          rm -rf build
-          bash build-code.sh
-      - name: Build shared-smart-pointer project
-        run: |
-          cd 07_shared-smart-pointer
-          rm -rf build
-          bash build-code.sh
-      - name: Build pass-by-reference project
-        run: |
-          cd 08_pass-by-reference
-          rm -rf build
-          bash build-code.sh
+          bash build-examples.sh
 
