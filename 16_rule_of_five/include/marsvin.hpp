@@ -2,15 +2,16 @@
 #define MARSVIN_H_
 
 #include <iostream>
-#include <set>
+#include <vector>
+#include <algorithm>
 #include <string>
 
 class Marsvin {
   public:
     Marsvin(std::string id);
     ~Marsvin();
-    /*
     Marsvin(const Marsvin& other);
+    /*
     Marsvin(Marsvin&& other);
     Marsvin& operator=(const Marsvin& other);
     */
@@ -20,7 +21,7 @@ class Marsvin {
     friend std::ostream& operator<<(std::ostream &output, const Marsvin& marsvin);
   private:
     std::string id_;
-    static std::set<std::string> id_container;
+    static std::vector<std::string> id_container;
 };
 
 #endif // MARSVIN_H_
