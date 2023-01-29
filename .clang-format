@@ -1,0 +1,65 @@
+---
+Language: Cpp
+Standard: Auto
+BasedOnStyle: Google
+
+IndentWidth: 4
+
+AccessModifierOffset: -2
+# Access modifiers of class will have 2 of identation.
+# Example:
+#   class Marsvin {
+#     public:
+#       int counter_;
+#   }
+#
+
+AllowAllParametersOfDeclarationOnNextLine: false
+# First argument of a function always in same line.
+# Example:
+#   void myFunction(int arg1, int arg2)
+#
+
+AllowShortFunctionsOnASingleLine: None
+# Never merge short functions in one line
+# Example:
+#   int myFunction(int arg1, int arg2) {
+#      return arg1 + arg2;
+#   }
+
+AllowShortIfStatementsOnASingleLine: false
+# If statement always in multiple lines
+# Example:
+#   if (var == 10) {
+#       Foo();
+#   }
+#
+
+AllowShortLoopsOnASingleLine: false
+# Always multiple lines for loops.
+# Example:
+#   for(std::size_t i = 0; i < 10; ++i) {
+#       Foo();
+#   }
+#
+
+BinPackArguments: false
+BinPackParameters: false
+# Only 2 scenerios. All function arguments
+# in the same line, or each argument in a line.
+# Example:
+#   void myFunction(int arg1, int arg2)
+#
+#   or
+#
+#   void myFunction(int arg1,
+#                   int arg2)
+#
+
+BreakBeforeBraces: Attach
+# Always attached braces
+# Example:
+#   class MyClass {
+#     public:
+#   }
+
