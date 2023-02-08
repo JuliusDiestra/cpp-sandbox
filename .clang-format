@@ -63,3 +63,28 @@ BreakBeforeBraces: Attach
 #     public:
 #   }
 
+KeepEmptyLinesAtTheStartOfBlocks: true
+# Let empty line after block starts
+# if (bool_) {
+#
+#   something;
+# }
+#
+
+SpaceBeforeInheritanceColon: true
+#
+# class ChildClass : public ParentClass {
+# }
+
+BreakConstructorInitializers: AfterColon
+PackConstructorInitializers: Never
+ConstructorInitializerIndentWidth: 2
+SpaceBeforeCtorInitializerColon: true
+
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Empty
+
+AlwaysBreakTemplateDeclarations: Yes
+

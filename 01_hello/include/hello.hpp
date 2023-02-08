@@ -3,13 +3,11 @@
 
 #include <iostream>
 
-class Hello
-{
-    public:
-        Hello();
-        void GreetingOne();
-        void GreetingTwo();
+class Hello {
+  public:
+    Hello();
+    void GreetingOne();
+    void GreetingTwo();
 };
 
-#endif // TOKEN_HELLO_H_
-
+#endif  // TOKEN_HELLO_H_

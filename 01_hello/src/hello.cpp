@@ -1,14 +1,13 @@
 #include "hello.hpp"
 
-// Define constructor
-Hello::Hello(){};
+Hello::Hello() :
+  value_(value),
+  mod_(mod){};
 
-void Hello::GreetingOne()
-{
-    std::cout << "Hello, dude" << std::endl;        
+void Hello::GreetingOne() {
+    std::cout << "Hello, dude" << std::endl;
 }
 
-void Hello::GreetingTwo()
-{
+void Hello::GreetingTwo() {
     std::cout << "How are you?" << std::endl;
 }
