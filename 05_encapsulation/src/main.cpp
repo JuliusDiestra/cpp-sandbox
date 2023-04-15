@@ -1,7 +1,6 @@
 #include "fun.hpp"
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     // Create LongitudinalControl Object
     LongitudinalControl object;
     // Set inputs
@@ -15,10 +14,13 @@ int main(int argc, char *argv[])
     object.Algorithm();
     // Read output
     std::cout << "### Get Outputs of object ###" << std::endl;
-    std::cout << "Deceleration : " << object.GetOutputData().deceleration << std::endl;
+    std::cout << "Deceleration : " << object.GetOutputData().deceleration
+              << std::endl;
     // Read Input....just in case
     std::cout << "### Get Inputs of object ###" << std::endl;
-    std::cout << "Input - velocity : " << object.GetInputData().velocity << std::endl;
-    std::cout << "Input - enable : " << object.GetInputData().enable << std::endl;
+    std::cout << "Input - velocity : " << object.GetInputData().velocity
+              << std::endl;
+    std::cout << "Input - enable : " << object.GetInputData().enable
+              << std::endl;
     return 0;
 }

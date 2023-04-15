@@ -3,13 +3,11 @@
 // Define constructor
 Vehicle::Vehicle(){};
 
-void Vehicle::SetVelocity(float velocity_)
-{
-    this->velocity_ = velocity_;         
+void Vehicle::SetVelocity(float velocity_) {
+    this->velocity_ = velocity_;
 }
 
-void Vehicle::SetAcceleration(float acceleration_)
-{
+void Vehicle::SetAcceleration(float acceleration_) {
     this->acceleration_ = acceleration_;
 }
 
@@ -20,5 +18,3 @@ float Vehicle::GetVelocity() {
 float Vehicle::GetAcceleration() {
     return acceleration_;
 }
-
-

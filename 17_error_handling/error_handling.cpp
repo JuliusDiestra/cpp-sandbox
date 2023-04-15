@@ -17,6 +17,7 @@ class OutOfRange : public std::out_of_range {
     ErrorCode type() {
         return error_code_;
     };
+
   private:
     ErrorCode error_code_;
     std::string ErrorCodeToString(ErrorCode error_code) {
@@ -36,13 +37,14 @@ class OutOfRange : public std::out_of_range {
         }
         return str;
     };
-
 };
-} // namespace error
+}  // namespace error
 
 class MyFancyClass {
   public:
-    MyFancyClass(int row, int column) : row_{row}, column_{column} {};
+    MyFancyClass(int row, int column) :
+      row_{row},
+      column_{column} {};
     void SetRow(int row) {
         if (row > row_) {
             throw error::OutOfRange(kRowLimit);
@@ -53,22 +55,25 @@ class MyFancyClass {
             throw error::OutOfRange(kColumnLimit);
         }
     };
+
   private:
     int row_;
     int column_;
 };
 
-int main () {
-    MyFancyClass fancy_instance_(2,3);
+int main() {
+    MyFancyClass fancy_instance_(2, 3);
     try {
         fancy_instance_.SetRow(3);
     } catch (const error::OutOfRange& my_exception_) {
-        std::cout << "Exception caught - what(): "  << my_exception_.what() << std::endl;
+        std::cout << "Exception caught - what(): " << my_exception_.what()
+                  << std::endl;
     }
     try {
         fancy_instance_.SetColumn(5);
     } catch (const error::OutOfRange& my_exception_) {
-        std::cout << "Exception caught - what(): "  << my_exception_.what() << std::endl;
+        std::cout << "Exception caught - what(): " << my_exception_.what()
+                  << std::endl;
     }
     return 0;
 }

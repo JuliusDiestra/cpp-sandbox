@@ -3,8 +3,7 @@
 // Define constructor
 PointerExample::PointerExample(){};
 
-void PointerExample::Run()
-{
+void PointerExample::Run() {
     // Define variable
     int var = 8;
     // Define pointer
@@ -24,7 +23,7 @@ void PointerExample::Run()
     // Prints new value store in address "pointerVar"
     std::cout << "*pointerVar :" << *pointerVar << std::endl;
     // Update Pointer Value
-    UpdateValue(pointerVar,10);
+    UpdateValue(pointerVar, 10);
     std::cout << "*pointerVar :" << *pointerVar << std::endl;
     // Define structure
     data data_one;
@@ -35,15 +34,11 @@ void PointerExample::Run()
     pointerData = &data_one;
     // Print pointer data values
     std::cout << "Define porinter to structure" << std::endl;
-    std::cout << "Pointer deceleration : " << (*pointerData).deceleration << std::endl;
+    std::cout << "Pointer deceleration : " << (*pointerData).deceleration
+              << std::endl;
     std::cout << "Pointer enable : " << (*pointerData).enable << std::endl;
-    
-    
 }
 
-
-void PointerExample::UpdateValue(int *pointer,int value)
-{
+void PointerExample::UpdateValue(int *pointer, int value) {
     *pointer = value;
 }
-

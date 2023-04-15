@@ -1,8 +1,6 @@
 #include "hello.hpp"
 
-Hello::Hello() :
-  value_(value),
-  mod_(mod){};
+Hello::Hello(){};
 
 void Hello::GreetingOne() {
     std::cout << "Hello, dude" << std::endl;

@@ -5,6 +5,6 @@ HelloLib::HelloLib(){};
 
 void HelloLib::Greeting()
 {
-    std::cout << "Hello from Library" << std::endl;        
+    std::cout << "Hello from Library" << std::endl;
 }
 
