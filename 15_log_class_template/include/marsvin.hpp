@@ -7,14 +7,13 @@
 class LogMarsvin {
   public:
     LogMarsvin();
-    template <typename T>
+    template<typename T>
     void operator<<(const std::vector<T>& vect);
 };
 
-LogMarsvin::LogMarsvin() {
-}
+LogMarsvin::LogMarsvin() {}
 
-template <typename T>
+template<typename T>
 void LogMarsvin::operator<<(const std::vector<T>& vect) {
     for (int j = 0; j < vect.size(); j++) {
         std::cout << vect[j] << std::endl;

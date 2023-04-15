@@ -5,7 +5,7 @@
 #include <iostream>
 #include <memory>
 
-template <typename T>
+template<typename T>
 class Marsvin {
   public:
     Marsvin(std::size_t size);
@@ -21,33 +21,33 @@ class Marsvin {
     T* data_;
 };
 
-template <typename T>
+template<typename T>
 Marsvin<T>::Marsvin(std::size_t size) :
   size_{size} {
     data_ = marsvin_allocator.allocate(size_);
 }
 
-template <typename T>
+template<typename T>
 Marsvin<T>::~Marsvin() {
     marsvin_allocator.deallocate(data_, size_);
 }
 
-template <typename T>
+template<typename T>
 T Marsvin<T>::getElement(std::size_t index) const {
     return data_[index];
 }
 
-template <typename T>
+template<typename T>
 void Marsvin<T>::setElement(std::size_t index, T value) {
     data_[index] = value;
 }
 
-template <typename T>
+template<typename T>
 std::size_t Marsvin<T>::getSize() {
     return size_;
 }
 
-template <typename T>
+template<typename T>
 void Marsvin<T>::Append(Marsvin& other) {
     T* data_temp = marsvin_allocator.allocate(size_);
     std::copy(data_, data_ + size_, data_temp);

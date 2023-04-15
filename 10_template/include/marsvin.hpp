@@ -9,11 +9,11 @@ class Marsvin {
   public:
     Marsvin();
     int AddingInt(int, int);
-    template <typename T>
+    template<typename T>
     T Adding(T, T);
 };
 
-template <typename T>
+template<typename T>
 T Marsvin::Adding(T x, T y) {
     return x + y;
 }
