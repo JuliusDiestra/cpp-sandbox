@@ -3,17 +3,17 @@
 
 #include <iostream>
 #include <memory>
+
 #include "vehicle.hpp"
 
-class Controller
-{
-    public:
-        Controller();
-        float GetActuation();
-        void CalculateActuation(std::shared_ptr<Vehicle> vehicle_);
-    private:
-        float actuation_;
+class Controller {
+  public:
+    Controller();
+    float GetActuation();
+    void CalculateActuation(std::shared_ptr<Vehicle> vehicle_);
+
+  private:
+    float actuation_;
 };
 
-#endif // TOKEN_CONTROLLER_H_
-
+#endif  // TOKEN_CONTROLLER_H_

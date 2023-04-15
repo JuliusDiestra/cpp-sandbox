@@ -3,20 +3,16 @@
 
 #include <iostream>
 
-struct data
-{
+struct data {
     float deceleration;
     bool enable;
 };
 
-
-class PointerExample
-{
-    public:
-        PointerExample();
-        void Run();
-        void UpdateValue(int *pointer, int value);
+class PointerExample {
+  public:
+    PointerExample();
+    void Run();
+    void UpdateValue(int *pointer, int value);
 };
 
-#endif // TOKEN_FUN_H_
-
+#endif  // TOKEN_FUN_H_

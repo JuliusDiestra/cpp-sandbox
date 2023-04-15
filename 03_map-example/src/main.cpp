@@ -1,8 +1,7 @@
 #include "fun.hpp"
 
-int main(int argc, char *argv[])
-{
-    MapExample object; 
+int main(int argc, char *argv[]) {
+    MapExample object;
     object.FillMap();
     object.PrintMapData();
     object.SearchMapData();

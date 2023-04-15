@@ -2,9 +2,9 @@
 
 int main() {
     // Initate vector
-    std::vector<float> vec_{1,2,3,4,5,6};
+    std::vector<float> vec_{1, 2, 3, 4, 5, 6};
     // Print size of vector
-    std::cout << "Vector size: " << vec_.size()  << std::endl;
+    std::cout << "Vector size: " << vec_.size() << std::endl;
     // Print vector using marsvin functions
     Marsvin::PrintVector(vec_);
     // Apend value to vector
@@ -17,12 +17,11 @@ int main() {
     Marsvin::PrintVector(vec_);
     // Insert value at specific location
     std::cout << "Insert value after position 3: " << std::endl;
-    vec_.insert(vec_.begin()+4,40.0f);
+    vec_.insert(vec_.begin() + 4, 40.0f);
     Marsvin::PrintVector(vec_);
     // Get subvector
     std::cout << "Get subvector. Intervars 0-3 : " << std::endl;
-    std::vector<float> subVector = Marsvin::GetSubvector(vec_,0,3);
+    std::vector<float> subVector = Marsvin::GetSubvector(vec_, 0, 3);
     Marsvin::PrintVector(subVector);
     return 0;
 }
-

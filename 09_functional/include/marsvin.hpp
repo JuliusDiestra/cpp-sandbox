@@ -1,14 +1,13 @@
 #ifndef MARSVIN_H_
 #define MARSVIN_H_
 
-#include <iostream>
 #include <functional>
+#include <iostream>
 
 class Marsvin {
-    public:
-        Marsvin();
-        int MultiplyByTwo(int x);
+  public:
+    Marsvin();
+    int MultiplyByTwo(int x);
 };
 
-#endif // MARSVIN_H__
-
+#endif  // MARSVIN_H__

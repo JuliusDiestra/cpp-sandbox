@@ -1,5 +1,5 @@
-#include "vehicle.hpp"
 #include "controller.hpp"
+#include "vehicle.hpp"
 
 int main(int argc, char *argv[]) {
 
