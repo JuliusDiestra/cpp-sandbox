@@ -3,8 +3,7 @@
 // Define constructor
 HelloLib::HelloLib(){};
 
-void HelloLib::Greeting()
-{
+void HelloLib::Greeting() {
     std::cout << "Hello from Library" << std::endl;
 }
 
