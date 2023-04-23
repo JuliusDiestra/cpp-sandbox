@@ -3,8 +3,7 @@
 
 #include <iostream>
 
-class HelloLib
-{
+class HelloLib {
     public:
         HelloLib();
         void Greeting();
